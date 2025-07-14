@@ -56,9 +56,7 @@ Leverage Lightning Platform, Apex, Flow Builder for workflows (e.g., quoting, in
 Phases: Assess fit (1-2 weeks), configure modules (4-6 weeks), custom code gaps (2-4 weeks), test/deploy (2 weeks). Total: 3-4 months.
 
 ### Pros
-- Rapid deployment, scalability.
-- Built-in AI/forecasting, easy integrations.
-- Automatic updates.
+- Rapid deployment.
 
 ### Cons
 - Ongoing subscriptions.
