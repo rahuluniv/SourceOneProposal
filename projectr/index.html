@@ -1,0 +1,2344 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A proposal for an ERP system for Source One.">
+      
+      
+      
+        <link rel="canonical" href="https://www.sourceone.global/projectr/">
+      
+      
+        <link rel="prev" href="../plan/">
+      
+      
+        <link rel="next" href="../system/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Project Requirements - Source One ERP Proposal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#project-requirements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Source One ERP Proposal" class="md-header__button md-logo" aria-label="Source One ERP Proposal" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Source One ERP Proposal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Project Requirements
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Source One ERP Proposal" class="md-nav__button md-logo" aria-label="Source One ERP Proposal" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Source One ERP Proposal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proposal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Project Requirements
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Requirements
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Glossary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procurement-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procurement Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quoting-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quoting Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sampling-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terms-po-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terms &amp; PO Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accounting-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accounting Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logistics-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logistics Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zmeeting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meetings and Discussions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Glossary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procurement-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procurement Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quoting-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quoting Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sampling-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terms-po-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terms &amp; PO Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accounting-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accounting Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logistics-module-sub-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logistics Module Sub-User Stories
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="project-requirements">Project Requirements</h1>
+<p><strong>Executive Summary</strong></p>
+<p>This project is to develop a software system to automate and streamline Source One's SysDev workflow, covering procurement, quoting, sampling, terms/PO, accounting, inventory, and logistics. It aims to reduce manual tasks, improve accuracy, and enable features like auto-PO generation and daily report automation, enhancing efficiency for sourcing and supply chain management.</p>
+<h3 id="project-glossary"><strong>Project Glossary</strong></h3>
+<ul>
+<li>
+<p><strong>RFQ</strong>: Request for Quotation – Client inquiry for product pricing.</p>
+</li>
+<li>
+<p><strong>SKU</strong>: Stock Keeping Unit – Unique product identifier.</p>
+</li>
+<li>
+<p><strong>CBM</strong>: Cubic Meter – Volume measurement for shipping.</p>
+</li>
+<li>
+<p><strong>PO</strong>: Purchase Order – Order placed with manufacturer.</p>
+</li>
+<li>
+<p><strong>SO</strong>: Sales Order – Order confirmation to client.</p>
+</li>
+<li>
+<p><strong>AP</strong>: Accounts Payable – Payments to suppliers/freight.</p>
+</li>
+<li>
+<p><strong>AR</strong>: Accounts Receivable – Invoices to clients.</p>
+</li>
+<li>
+<p><strong>QA</strong>: Quality Assurance – Sample/product testing.</p>
+</li>
+<li>
+<p><strong>CI</strong>: Commercial Invoice – Supplier billing document.</p>
+</li>
+<li>
+<p><strong>PL</strong>: Packing List – Shipment contents details.</p>
+</li>
+<li>
+<p><strong>BL</strong>: Bill of Lading – Shipping contract.</p>
+</li>
+<li>
+<p><strong>ISF</strong>: Importer Security Filing – Customs pre-arrival info.</p>
+</li>
+<li>
+<p><strong>ETA</strong>: Estimated Time of Arrival – Shipment delivery estimate.</p>
+</li>
+<li>
+<p><strong>3PL</strong>: Third-Party Logistics – External fulfillment provider.</p>
+</li>
+<li>
+<p><strong>DC</strong>: Distribution Center – Client's warehouse.</p>
+</li>
+</ul>
+<h3 id="user-stories"><strong>User Stories</strong></h3>
+<p><strong>Procurement Module:</strong></p>
+<ul>
+<li>
+<p>As a procurement specialist, I want to input RFQ details so that I can gather SKU specs like weight, quantity, and material.</p>
+</li>
+<li>
+<p>As a procurement specialist, I want to search and log manufacturers worldwide with details (name, address, website, email, phone, status) in a database per SKU.</p>
+</li>
+<li>
+<p>As a procurement specialist, I want to upload and store product catalogs in a shared digital repository for team access.</p>
+</li>
+</ul>
+<p><strong>Quoting Module:</strong></p>
+<ul>
+<li>
+<p>As a quoter, I want to list client-interested products and estimate annual cases based on business type/volume if not provided.</p>
+</li>
+<li>
+<p>As a quoter, I want to verify product details (quantity/case, manufacturer price, case dimensions, pallet fit) from a quotation sheet.</p>
+</li>
+<li>
+<p>As a quoter, I want to request missing product info (pricing, dimensions, quantity) from sourcing team via integrated notifications.</p>
+</li>
+<li>
+<p>As a quoter, I want to auto-calculate CBM, cases/pallet, fulfillment costs, and selling price including margins, freight, duties.</p>
+</li>
+<li>
+<p>As a quoter, I want to consult logistics for cost validation (delivery, fulfillment, freight, drayage) through system queries.</p>
+</li>
+<li>
+<p>As a quoter, I want to compute final quotation with landed costs, profits, margins, and adjust for targets.</p>
+</li>
+</ul>
+<p><strong>Sampling Module:</strong></p>
+<ul>
+<li>
+<p>As a sampling coordinator, I want to check sample availability and send them immediately if in stock.</p>
+</li>
+<li>
+<p>As a sampling coordinator, I want to request mold/template creation time if samples unavailable.</p>
+</li>
+<li>
+<p>As a sampling coordinator, I want to QA samples internally and log approvals.</p>
+</li>
+<li>
+<p>As a sampling coordinator, I want to send approved samples to clients and track testing/approval status.</p>
+</li>
+</ul>
+<p><strong>Terms &amp; PO Module:</strong></p>
+<ul>
+<li>
+<p>As a sales admin, I want to draft term sheets, send for legal review, and finalize for client signature.</p>
+</li>
+<li>
+<p>As a sales admin, I want to generate and send SO/PO to manufacturers upon term approval.</p>
+</li>
+</ul>
+<p><strong>Accounting Module:</strong></p>
+<ul>
+<li>
+<p>As an accountant, I want to handle client-initiated orders: receive PO, generate invoice, place manufacturer order, receive invoice.</p>
+</li>
+<li>
+<p>As an accountant, I want to manage inventory-triggered orders: flag replenishment, initiate manufacturer order, receive deposit invoice.</p>
+</li>
+<li>
+<p>As an accountant, I want to categorize invoices into AP (manufacturer, freight) and AR (client-grouped).</p>
+</li>
+<li>
+<p>As an accountant, I want to process deposits/balances, send wire confirmations, and mark invoices paid.</p>
+</li>
+<li>
+<p>As an accountant, I want to track client payments: record due/paid amounts, dates, status, discounts, and mark AR paid.</p>
+</li>
+</ul>
+<p><strong>Inventory Module (Daily Workflow):</strong></p>
+<ul>
+<li>
+<p>As an inventory manager, I want a dashboard to open tools (email, notes, sheets) and review emails for updates.</p>
+</li>
+<li>
+<p>As an inventory manager, I want to monitor POs: delivery windows, delays, scheduled shipments.</p>
+</li>
+<li>
+<p>As an inventory manager, I want to review inventory: on-hand levels, days projected, upcoming arrivals, reorder points.</p>
+</li>
+<li>
+<p>As an inventory manager, I want to prioritize low-stock/volatile SKUs and those in sampling.</p>
+</li>
+<li>
+<p>As an inventory manager, I want to track containers/production: builds, invoices, shipping, order placement.</p>
+</li>
+<li>
+<p>As an inventory manager, I want to compare inventory with 60-day plan and adjust for shipments.</p>
+</li>
+<li>
+<p>As an inventory manager, I want to auto-generate daily summaries with bolded key info.</p>
+</li>
+<li>
+<p>As an inventory manager, I want auto-PO triggers for low stock and a recommendation engine.</p>
+</li>
+</ul>
+<p><strong>Logistics Module:</strong></p>
+<ul>
+<li>
+<p>As a logistics coordinator, I want to initiate PO/deposit and confirm supplier lead times/production progress.</p>
+</li>
+<li>
+<p>As a logistics coordinator, I want 5-day pre-completion checks: status confirmation, RFQ to forwarders.</p>
+</li>
+<li>
+<p>As a logistics coordinator, I want to book freight: select forwarder, coordinate container, collect CI/PL.</p>
+</li>
+<li>
+<p>As a logistics coordinator, I want to handle port handover: receive ISF/BL, submit to broker.</p>
+</li>
+<li>
+<p>As a logistics coordinator, I want daily in-transit tracking and ETA notifications.</p>
+</li>
+<li>
+<p>As a logistics coordinator, I want pre-arrival setup: obtain Arrival Notice.</p>
+</li>
+<li>
+<p>As a logistics coordinator, I want to settle finances: pay supplier/freight, secure BL/Telex.</p>
+</li>
+<li>
+<p>As a logistics coordinator, I want customs clearance: send docs to broker, handle queries, confirm release.</p>
+</li>
+<li>
+<p>As a logistics coordinator, I want drayage/pickup: arrange trucking to client DC or 3PL, confirm delivery/intake.</p>
+</li>
+<li>
+<p>As a logistics coordinator, I want final fulfillment: submit PO to warehouse, coordinate pick/pack/delivery, confirm to client.</p>
+</li>
+</ul>
+<p><strong>Project Requirements</strong> </p>
+<h3 id="procurement-module-sub-user-stories"><strong>Procurement Module Sub-User Stories</strong></h3>
+<ol>
+<li>
+<p><strong>Sub-User Story: As a procurement specialist, I want to input RFQ details, including SKU specs (weight, quantity, material), to start sourcing.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Allows entry of RFQ data to initiate manufacturer search with precise product specs.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>PROC-001: Create RFQ input form.</p>
+</li>
+<li>
+<p>PROC-002: Validate SKU fields.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Form saves RFQ with all specs.</p>
+</li>
+<li>
+<p>Validation errors shown for missing fields.</p>
+</li>
+<li>
+<p>Data persists in database.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a procurement specialist, I want to search manufacturers by criteria (price, quality, location) and add them to the database.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Enables querying global manufacturers and logging matches per SKU.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>PROC-003: Integrate manufacturer search API.</p>
+</li>
+<li>
+<p>PROC-004: Add database entry functionality.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Search returns filtered results.</p>
+</li>
+<li>
+<p>New entries added with all details.</p>
+</li>
+<li>
+<p>Duplicates prevented.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a procurement specialist, I want to update manufacturer status (e.g., Contacted, Pending Quotation) in real-time.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Tracks interaction progress with manufacturers for each SKU.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>PROC-005: Implement status dropdown.</p>
+</li>
+<li>
+<p>PROC-006: Real-time update via WebSocket.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Status changes saved instantly.</p>
+</li>
+<li>
+<p>Updates visible to all users.</p>
+</li>
+<li>
+<p>Audit log recorded.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a procurement specialist, I want to upload catalogs and receive notifications for access requests.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Stores catalogs digitally and alerts on team access needs.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>PROC-007: File upload endpoint.</p>
+</li>
+<li>
+<p>PROC-008: Notification system integration.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Uploads stored securely.</p>
+</li>
+<li>
+<p>Emails sent on access requests.</p>
+</li>
+<li>
+<p>File previews available.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="quoting-module-sub-user-stories"><strong>Quoting Module Sub-User Stories</strong></h3>
+<ol>
+<li>
+<p><strong>Sub-User Story: As a quoter, I want to auto-populate product lists from client RFQ data.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Pulls products from RFQ to pre-fill quoting sheet.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>QUOT-001: RFQ data integration.</p>
+</li>
+<li>
+<p>QUOT-002: Auto-populate logic.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>List fills on RFQ selection.</p>
+</li>
+<li>
+<p>Editable if needed.</p>
+</li>
+<li>
+<p>No data loss on refresh.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a quoter, I want to estimate annual cases using predefined business type templates.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Applies templates based on client type for volume estimates.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>QUOT-003: Template database setup.</p>
+</li>
+<li>
+<p>QUOT-004: Estimation algorithm.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Estimates calculated accurately.</p>
+</li>
+<li>
+<p>Templates customizable.</p>
+</li>
+<li>
+<p>Results displayed per product.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a quoter, I want to fetch and verify product details (quantity/case, manufacturer price, case dimensions, pallet fit) from integrated quotation sheets.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Retrieves and checks details from sheets for accuracy.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>QUOT-005: Sheet API connection.</p>
+</li>
+<li>
+<p>QUOT-006: Verification checks.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Data fetched on demand.</p>
+</li>
+<li>
+<p>Mismatches flagged.</p>
+</li>
+<li>
+<p>Verified status logged.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a quoter, I want to send automated requests to sourcing for missing info and track responses.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Notifies sourcing team and monitors replies for gaps.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>QUOT-007: Request notification system.</p>
+</li>
+<li>
+<p>QUOT-008: Response tracking dashboard.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Requests emailed with details.</p>
+</li>
+<li>
+<p>Responses update status.</p>
+</li>
+<li>
+<p>Timeout alerts.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a quoter, I want formulas to auto-calculate CBM and cases per pallet.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Computes volume and pallet metrics from dimensions.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>QUOT-009: Formula implementation.</p>
+</li>
+<li>
+<p>QUOT-010: Input validation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Calculations accurate.</p>
+</li>
+<li>
+<p>Updates on input change.</p>
+</li>
+<li>
+<p>Error for invalid inputs.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a quoter, I want to input fulfillment costs and see real-time selling price adjustments.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Allows cost entry with instant price recalculation.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>QUOT-011: Cost input fields.</p>
+</li>
+<li>
+<p>QUOT-012: Real-time calc engine.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Prices update live.</p>
+</li>
+<li>
+<p>Includes margins.</p>
+</li>
+<li>
+<p>History of adjustments.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a quoter, I want to query logistics API for cost validation (delivery, fulfillment, freight, drayage) and log results.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Validates costs via API and records outcomes.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>QUOT-013: API integration.</p>
+</li>
+<li>
+<p>QUOT-014: Logging mechanism.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>API calls successful.</p>
+</li>
+<li>
+<p>Results logged and displayed.</p>
+</li>
+<li>
+<p>Errors handled gracefully.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a quoter, I want to generate final quotation reports with breakdowns of costs, profits, and margins.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Produces detailed quote documents.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>QUOT-015: Report template.</p>
+</li>
+<li>
+<p>QUOT-016: Export to PDF.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Reports include all breakdowns.</p>
+</li>
+<li>
+<p>Exportable formats.</p>
+</li>
+<li>
+<p>Customizable headers.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="sampling-module-sub-user-stories"><strong>Sampling Module Sub-User Stories</strong></h3>
+<ol>
+<li>
+<p><strong>Sub-User Story: As a sampling coordinator, I want to query inventory for sample availability and auto-generate shipping labels.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Checks stock and creates labels for immediate dispatch.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>SAMP-001: Inventory query API.</p>
+</li>
+<li>
+<p>SAMP-002: Label generation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Availability shown accurately.</p>
+</li>
+<li>
+<p>Labels printable.</p>
+</li>
+<li>
+<p>Stock updated post-shipment.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a sampling coordinator, I want to schedule mold creation timelines and notify teams.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Sets timelines for custom samples and alerts stakeholders.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>SAMP-003: Calendar integration.</p>
+</li>
+<li>
+<p>SAMP-004: Notification setup.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Timelines saved and visible.</p>
+</li>
+<li>
+<p>Notifications sent on schedule.</p>
+</li>
+<li>
+<p>Conflicts flagged.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a sampling coordinator, I want to log QA results with photos and approval timestamps.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Records internal testing with evidence and times.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>SAMP-005: QA form.</p>
+</li>
+<li>
+<p>SAMP-006: Photo upload.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Logs include photos/timestamps.</p>
+</li>
+<li>
+<p>Approvals digital-signed.</p>
+</li>
+<li>
+<p>Searchable logs.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a sampling coordinator, I want to track client sample receipt, testing feedback, and approval status via dashboard.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Monitors client-side process on a central dashboard.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>SAMP-007: Dashboard build.</p>
+</li>
+<li>
+<p>SAMP-008: Status updates.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Real-time status.</p>
+</li>
+<li>
+<p>Feedback logged.</p>
+</li>
+<li>
+<p>Alerts on delays.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="terms-po-module-sub-user-stories"><strong>Terms &amp; PO Module Sub-User Stories</strong></h3>
+<ol>
+<li>
+<p><strong>Sub-User Story: As a sales admin, I want to auto-draft term sheets from quotation data.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Generates terms using quote info.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>TERM-001: Drafting template.</p>
+</li>
+<li>
+<p>TERM-002: Data mapping.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Drafts accurate.</p>
+</li>
+<li>
+<p>Editable sections.</p>
+</li>
+<li>
+<p>Version control.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a sales admin, I want to route term sheets to legal for review and track revisions.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Sends to legal and follows changes.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>TERM-003: Routing workflow.</p>
+</li>
+<li>
+<p>TERM-004: Revision tracking.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Routed via email/portal.</p>
+</li>
+<li>
+<p>Revisions highlighted.</p>
+</li>
+<li>
+<p>Approval workflow.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a sales admin, I want to send finalized terms to clients and monitor signature status.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Delivers terms and tracks e-signatures.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>TERM-005: Sending integration.</p>
+</li>
+<li>
+<p>TERM-006: Signature monitoring.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Sent securely.</p>
+</li>
+<li>
+<p>Status updates real-time.</p>
+</li>
+<li>
+<p>Reminders automated.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a sales admin, I want to generate SO/PO documents and send them to manufacturers with one click.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Creates and dispatches orders instantly.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>TERM-007: Document generator.</p>
+</li>
+<li>
+<p>TERM-008: One-click send.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Docs generated correctly.</p>
+</li>
+<li>
+<p>Sent and confirmed.</p>
+</li>
+<li>
+<p>Copies archived.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="accounting-module-sub-user-stories"><strong>Accounting Module Sub-User Stories</strong></h3>
+<ol>
+<li>
+<p><strong>Sub-User Story: As an accountant, I want to receive client PO alerts and auto-generate Source One invoices.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Notifies on POs and creates invoices.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>ACCT-001: Alert system.</p>
+</li>
+<li>
+<p>ACCT-002: Invoice auto-gen.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Alerts via email/dashboard.</p>
+</li>
+<li>
+<p>Invoices accurate.</p>
+</li>
+<li>
+<p>Linked to PO.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an accountant, I want to link manufacturer orders to client POs for tracking.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Connects orders for traceability.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>ACCT-003: Linking logic.</p>
+</li>
+<li>
+<p>ACCT-004: Tracking view.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Links created manually/auto.</p>
+</li>
+<li>
+<p>Tracking shows chain.</p>
+</li>
+<li>
+<p>Reports on links.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an accountant, I want inventory flags to trigger replenishment orders automatically.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Auto-orders on low stock flags.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>ACCT-005: Flag triggers.</p>
+</li>
+<li>
+<p>ACCT-006: Auto-order setup.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Triggers on thresholds.</p>
+</li>
+<li>
+<p>Orders placed.</p>
+</li>
+<li>
+<p>Approvals optional.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an accountant, I want to categorize and group invoices by type (AP/AR) and client.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Organizes invoices for easy management.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>ACCT-007: Categorization.</p>
+</li>
+<li>
+<p>ACCT-008: Grouping filters.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Auto-categorized.</p>
+</li>
+<li>
+<p>Grouped views.</p>
+</li>
+<li>
+<p>Searchable.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an accountant, I want to process payments with wire confirmations and auto-mark as paid.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Handles payments and updates status.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>ACCT-009: Payment processor.</p>
+</li>
+<li>
+<p>ACCT-010: Auto-mark.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Wires confirmed.</p>
+</li>
+<li>
+<p>Status updated.</p>
+</li>
+<li>
+<p>Receipts generated.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an accountant, I want to track client AR with reminders for due dates and discounts.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Monitors receivables with alerts.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>ACCT-011: AR tracker.</p>
+</li>
+<li>
+<p>ACCT-012: Reminder automation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Due dates tracked.</p>
+</li>
+<li>
+<p>Reminders sent.</p>
+</li>
+<li>
+<p>Discounts applied.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="inventory-module-sub-user-stories"><strong>Inventory Module Sub-User Stories</strong></h3>
+<ol>
+<li>
+<p><strong>Sub-User Story: As an inventory manager, I want a morning dashboard summarizing emails and updates.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Provides daily start overview.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>INV-001: Dashboard build.</p>
+</li>
+<li>
+<p>INV-002: Email integration.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Summarizes key emails.</p>
+</li>
+<li>
+<p>Updates highlighted.</p>
+</li>
+<li>
+<p>Customizable widgets.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an inventory manager, I want PO monitoring with alerts for delays and ETA changes.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Tracks POs with notifications.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>INV-003: Monitoring tools.</p>
+</li>
+<li>
+<p>INV-004: Alert system.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Delays flagged.</p>
+</li>
+<li>
+<p>ETAs updated.</p>
+</li>
+<li>
+<p>Alerts emailed.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an inventory manager, I want real-time views of on-hand levels, projections, and reorder suggestions.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Shows current and future stock.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>INV-005: Real-time data.</p>
+</li>
+<li>
+<p>INV-006: Projection calc.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Live updates.</p>
+</li>
+<li>
+<p>Suggestions accurate.</p>
+</li>
+<li>
+<p>Graphs included.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an inventory manager, I want priority flags for low-stock SKUs with custom thresholds.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Highlights critical items.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>INV-007: Flag logic.</p>
+</li>
+<li>
+<p>INV-008: Threshold settings.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Flags auto-set.</p>
+</li>
+<li>
+<p>Thresholds per SKU.</p>
+</li>
+<li>
+<p>Prioritized list.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an inventory manager, I want container tracking integrated with production status updates.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Monitors shipments and production.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>INV-009: Tracking API.</p>
+</li>
+<li>
+<p>INV-010: Status sync.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Real-time tracking.</p>
+</li>
+<li>
+<p>Status linked.</p>
+</li>
+<li>
+<p>Maps if geo.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an inventory manager, I want 60-day plan comparisons with adjustment tools.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Compares actual vs plan and adjusts.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>INV-011: Comparison engine.</p>
+</li>
+<li>
+<p>INV-012: Adjustment UI.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Differences highlighted.</p>
+</li>
+<li>
+<p>Adjustments saved.</p>
+</li>
+<li>
+<p>Reports generated.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an inventory manager, I want auto-generated daily reports emailed to stakeholders.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Creates and sends summaries.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>INV-013: Report generator.</p>
+</li>
+<li>
+<p>INV-014: Email automation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Reports formatted.</p>
+</li>
+<li>
+<p>Sent daily.</p>
+</li>
+<li>
+<p>Custom recipients.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As an inventory manager, I want AI-driven PO recommendations based on stock trends.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Suggests orders using trends.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>INV-015: AI model integration.</p>
+</li>
+<li>
+<p>INV-016: Recommendation display.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Suggestions accurate.</p>
+</li>
+<li>
+<p>Based on data.</p>
+</li>
+<li>
+<p>Accept/reject options.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="logistics-module-sub-user-stories"><strong>Logistics Module Sub-User Stories</strong></h3>
+<ol>
+<li>
+<p><strong>Sub-User Story: As a logistics coordinator, I want PO initiation with deposit processing and lead time confirmations.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Starts POs with payments and times.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>LOG-001: PO init form.</p>
+</li>
+<li>
+<p>LOG-002: Deposit integration.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>POs created.</p>
+</li>
+<li>
+<p>Deposits processed.</p>
+</li>
+<li>
+<p>Lead times confirmed.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a logistics coordinator, I want automated 5-day pre-completion reminders and RFQ sends to forwarders.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Reminds and requests quotes near end.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>LOG-003: Reminder automation.</p>
+</li>
+<li>
+<p>LOG-004: RFQ sender.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Reminders timed.</p>
+</li>
+<li>
+<p>RFQs sent.</p>
+</li>
+<li>
+<p>Responses tracked.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a logistics coordinator, I want forwarder selection tools with cost comparisons.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Chooses forwarders by comparing.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>LOG-005: Selection UI.</p>
+</li>
+<li>
+<p>LOG-006: Comparison table.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Costs compared.</p>
+</li>
+<li>
+<p>Selection saved.</p>
+</li>
+<li>
+<p>Filters applied.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a logistics coordinator, I want document collection (CI/PL) and auto-submission to ports.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Gathers and submits docs.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>LOG-007: Doc collector.</p>
+</li>
+<li>
+<p>LOG-008: Auto-submit.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Docs uploaded.</p>
+</li>
+<li>
+<p>Submitted auto.</p>
+</li>
+<li>
+<p>Confirmations received.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a logistics coordinator, I want daily tracking updates with ETA notifications.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Provides shipment tracking.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>LOG-009: Tracking API.</p>
+</li>
+<li>
+<p>LOG-010: Notification setup.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Daily updates.</p>
+</li>
+<li>
+<p>ETAs notified.</p>
+</li>
+<li>
+<p>History logged.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a logistics coordinator, I want pre-arrival checklists for Arrival Notices.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Manages pre-arrival tasks.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>LOG-011: Checklist builder.</p>
+</li>
+<li>
+<p>LOG-012: Notice handling.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Checklists completed.</p>
+</li>
+<li>
+<p>Notices processed.</p>
+</li>
+<li>
+<p>Tasks assigned.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a logistics coordinator, I want payment settlement workflows for suppliers and freight.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Handles final payments.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>LOG-013: Workflow engine.</p>
+</li>
+<li>
+<p>LOG-014: Payment links.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Payments settled.</p>
+</li>
+<li>
+<p>Workflows approved.</p>
+</li>
+<li>
+<p>Receipts issued.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a logistics coordinator, I want customs document uploads and query resolution tracking.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Uploads docs and tracks issues.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>LOG-015: Upload system.</p>
+</li>
+<li>
+<p>LOG-016: Query tracker.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Uploads secure.</p>
+</li>
+<li>
+<p>Queries resolved.</p>
+</li>
+<li>
+<p>Status updated.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a logistics coordinator, I want drayage scheduling to DC or 3PL with confirmation logs.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Schedules trucking with logs.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>LOG-017: Scheduling tool.</p>
+</li>
+<li>
+<p>LOG-018: Confirmation logging.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>Schedules set.</p>
+</li>
+<li>
+<p>Confirmations logged.</p>
+</li>
+<li>
+<p>Conflicts avoided.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sub-User Story: As a logistics coordinator, I want fulfillment PO submissions and delivery confirmations.</strong></p>
+<ul>
+<li>
+<p><strong>Explanation</strong>: Submits to warehouse and confirms delivery.</p>
+</li>
+<li>
+<p><strong>Tickets</strong>:</p>
+<ul>
+<li>
+<p>LOG-019: PO submit.</p>
+</li>
+<li>
+<p>LOG-020: Confirmation system.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+<li>
+<p>POs submitted.</p>
+</li>
+<li>
+<p>Deliveries confirmed.</p>
+</li>
+<li>
+<p>Status closed.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../plan/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Project Plan">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Project Plan
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../system/" class="md-footer__link md-footer__link--next" aria-label="Next: Software Architecture">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Software Architecture
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Malkano
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,621 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A proposal for an ERP system for Source One.">
+      
+      
+      
+        <link rel="canonical" href="https://www.sourceone.global/">
+      
+      
+      
+        <link rel="next" href="plan/">
+      
+      
+      <link rel="icon" href="assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Source One ERP Proposal</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proposal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Source One ERP Proposal" class="md-header__button md-logo" aria-label="Source One ERP Proposal" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Source One ERP Proposal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Proposal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Source One ERP Proposal" class="md-nav__button md-logo" aria-label="Source One ERP Proposal" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    Source One ERP Proposal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proposal
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projectr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="zmeeting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meetings and Discussions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="proposal">Proposal</h1>
+<h1 id="introduction">Introduction</h1>
+<p>This document proposes the design and implementation of a comprehensive internal enterprise resource planning (ERP) system—referred to hereafter as the Source One Workflow System (SWS)—to automate and optimize Source One’s core business processes, including procurement, quoting, sampling, purchase order management, accounting, inventory control, and logistics coordination. The goal of SWS is to consolidate disparate manual and semi-automated workflows into a unified platform that enhances operational efficiency, reduces errors, and provides real-time visibility into critical business metrics.</p>
+<p>The SWS will be designed to enhance Source One’s existing workflow, which involves managing requests for quotations (RFQs), sourcing products, generating quotes, drafting terms and purchase orders (POs), handling accounting tasks, monitoring inventory levels, and coordinating logistics activities. By automating these processes, SWS aims to streamline operations, improve data accuracy, and enable better decision-making through enhanced reporting and analytics capabilities.</p>
+<h1 id="problem-statement">Problem Statement</h1>
+<p>Source One currently relies on a combination of manual processes, spreadsheets, and disparate software tools to manage its core business functions. This fragmented approach leads to inefficiencies, data inconsistencies, and a lack of real-time visibility into key performance indicators (KPIs). The existing workflow involves multiple handoffs between departments, resulting in delays, errors, and increased operational costs. Additionally, the current system lacks the scalability and flexibility needed to adapt to changing business requirements and market conditions.</p>
+<p>The primary challenges faced by Source One include:</p>
+<ul>
+<li>
+<p><strong>Manual Data Entry</strong>: High risk of errors and inefficiencies due to reliance on manual data entry across multiple systems.</p>
+</li>
+<li>
+<p><strong>Lack of Integration</strong>: Disparate systems lead to data silos, making it difficult to obtain a holistic view of operations.</p>
+</li>
+<li>
+<p><strong>Limited Reporting and Analytics</strong>: Inability to generate real-time reports and insights, hindering data-driven decision-making.</p>
+</li>
+<li>
+<p><strong>Inefficient Workflows</strong>: Manual processes result in delays and bottlenecks, impacting overall productivity.</p>
+</li>
+<li>
+<p><strong>Scalability Issues</strong>: Current systems are not designed to scale with business growth, leading to potential operational constraints.</p>
+</li>
+</ul>
+<h1 id="objectives">Objectives</h1>
+<p>The primary objectives of the Source One Workflow System are:</p>
+<ol>
+<li>
+<p><strong>Automate Core Business Processes</strong>: Streamline procurement, quoting, sampling, terms/PO management, accounting, inventory control, and logistics coordination through automation.</p>
+</li>
+<li>
+<p><strong>Enhance Data Accuracy</strong>: Reduce manual data entry and associated errors by integrating systems and automating data flows.</p>
+</li>
+<li>
+<p><strong>Improve Reporting and Analytics</strong>: Provide real-time visibility into key performance metrics through advanced reporting and analytics capabilities.</p>
+</li>
+<li>
+<p><strong>Increase Operational Efficiency</strong>: Eliminate bottlenecks and streamline workflows to improve overall productivity and reduce operational costs.</p>
+</li>
+<li>
+<p><strong>Ensure Scalability</strong>: Design the system to accommodate future growth and changing business requirements without significant rework.</p>
+</li>
+<li>
+<p><strong>Facilitate Collaboration</strong>: Enable seamless collaboration between departments through a unified platform that integrates all core business functions.</p>
+</li>
+</ol>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Proposal for automating Source One's SysDev workflows (procurement, quoting, sampling, terms/PO, accounting, inventory, logistics): We can Solve this Problem by customizing Salesforce or building Custom software. Salesforce offers faster rollout but higher initial cost with ongoing fees and very low of customizability, we might not even be able to customize it to satisfy all our needs. Custom provides exact fit as per requirements but requires more time and resources. We can choose based on budget, timeline, and flexibility needs.</p>
+<h2 id="options-overview">Options Overview</h2>
+<ol>
+<li><strong>Salesforce Customization</strong>: Leverage Salesforce's Manufacturing Cloud and Sales Cloud to configure and customize workflows. This option provides rapid deployment and built-in features but comes with ongoing subscription costs and limited flexibility for unique workflows and additions.</li>
+<li><strong>Custom Software Development</strong>: Build a fully tailored software solution using modern web technologies (e.g., Django/Node.js backend, React frontend, PostgreSQL database). This option allows for complete customization and ownership but requires a higher initial investment and longer development timeline. It also involves ongoing maintenance and support.</li>
+</ol>
+<h2 id="detailed-options-analysis">Detailed Options Analysis</h2>
+<h2 id="option-1-salesforce-customization">Option 1: Salesforce Customization</h2>
+<h3 id="development-approach">Development Approach</h3>
+<p>Leverage Lightning Platform, Apex, Flow Builder for workflows (e.g., quoting, inventory alerts). Use Manufacturing Cloud for inventory/logistics, Sales Cloud for quoting/PO. </p>
+<p>Phases: Assess fit (1-2 weeks), configure modules (4-6 weeks), custom code gaps (2-4 weeks), test/deploy (2 weeks). Total: 3-4 months.</p>
+<h3 id="pros">Pros</h3>
+<ul>
+<li>Rapid deployment.</li>
+</ul>
+<h3 id="cons">Cons</h3>
+<ul>
+<li>Ongoing subscriptions.</li>
+<li>Limited flexibility for unique workflows.</li>
+<li>Vendor lock-in.</li>
+</ul>
+<h3 id="costtime-estimate">Cost/Time Estimate</h3>
+<ul>
+<li>Implementation: $75k–$100k.</li>
+<li>Subscription: $400/user/month (Unlimited Edition; increases to $425 Aug 2025). For 10 users: $48k/year now.</li>
+<li>Maintenance: $20k–$40k/year.</li>
+<li>Time: 3-4 months.</li>
+</ul>
+<h2 id="option-2-custom-software-development">Option 2: Custom Software Development</h2>
+<h3 id="development-approach_1">Development Approach</h3>
+<p>Build a custom web application using Django/Node.js for backend, React for frontend, PostgreSQL for database. Key modules: procurement, quoting, sampling, terms/PO, accounting, inventory, logistics.</p>
+<h3 id="pros_1">Pros</h3>
+<ul>
+<li>Fully tailored.</li>
+<li>No recurring fees post-launch (except maintenance).</li>
+<li>Complete ownership.</li>
+</ul>
+<h3 id="cons_1">Cons</h3>
+<ul>
+<li>Extra effort for scalability.</li>
+<li>Longer development timeline.</li>
+<li>Requires ongoing maintenance.</li>
+</ul>
+<h3 id="costtime-estimate_1">Cost/Time Estimate</h3>
+<ul>
+<li>Development: $70k–$90k.</li>
+<li>Subscription: $0.</li>
+<li>Maintenance: $30k–$35k/year (Database/hosting/support).</li>
+<li>Time: 5-7 months.</li>
+</ul>
+<h2 id="comparison-table">Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Salesforce</th>
+<th>Custom Software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Development Time</td>
+<td>3-4 months</td>
+<td>5-7 months</td>
+</tr>
+<tr>
+<td>Initial Development Cost</td>
+<td>$75k–$100k</td>
+<td>$70k–$90k</td>
+</tr>
+<tr>
+<td>Customization</td>
+<td>Config/code limited</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>Built-in</td>
+<td>Custom effort</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>Pre-built but Not Flexible</td>
+<td>Flexible but effort</td>
+</tr>
+<tr>
+<td>Maintenance</td>
+<td>Vendor-handled</td>
+<td>Self-managed and Self-hosted</td>
+</tr>
+</tbody>
+</table>
+<h2 id="project-completion-process-custom-software">Project Completion Process - Custom Software</h2>
+<ul>
+<li>Weeks 1–2: Requirements (specs/wireframes).</li>
+<li>Weeks 3–5: Design (architecture).</li>
+<li>Weeks 6–20: Development/integration (modules/APIs).</li>
+<li>Weeks 21–24: Testing (comprehensive).</li>
+<li>Weeks 25–26: Deploy/train (cloud/custom).</li>
+<li>Ongoing: In-house updates. Total: 5-7 months.</li>
+</ul>
+<h2 id="project-completion-process-salesforce">Project Completion Process - Salesforce</h2>
+<ul>
+<li>Weeks 1–2: Discovery (analyze/map workflows).</li>
+<li>Weeks 3–6: Configuration (Flow Builder/objects).</li>
+<li>Weeks 7–10: Customization (Apex/integrations).</li>
+<li>Weeks 11–12: Integration (connectors).</li>
+<li>Weeks 13–14: Testing (unit/UAT).</li>
+<li>Week 15: Deploy/train (Trailhead).</li>
+<li>Ongoing: Monitor/updates. Total: 3-4 months.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="plan/" class="md-footer__link md-footer__link--next" aria-label="Next: Project Plan">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Project Plan
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Malkano
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
